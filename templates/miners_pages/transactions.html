@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} | Transactions {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12 col-sm-12 col-xm-12">
+                <p class="text-center text-danger display-4">Transactions</p>
+                {% if transactions %}
+                    <table class="table table-hover table-bordered mb-2 display nowrap">
+                        <thead>
+                            <tr class="text-white table-head">
+                                <th scope="col">SN</th>
+                                <th scope="col">BTC Address</th>
+                                <th scope="col">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for transaction in transactions %}
+                            <tr>
+                                <td scope="row">{{ forloop.counter }}</td>
+                                <td><a href="{{ transaction.btc_address_link }}" target="_blank">{{ transaction.btc_address }}</a></td>
+                                <td class="sch_name">{{ transaction.amount }} BTC</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p class="display-4">There are no transactions carried out yet!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

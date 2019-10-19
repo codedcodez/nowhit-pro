@@ -1,0 +1,116 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/623c1b98c8.js" crossorigin="anonymous"></script>
+
+        <!-- Web Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap" rel="stylesheet">
+
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+
+        <title>MinersHome {% block title %} {% endblock %}</title>
+        <style type="text/css">
+            .asteriskField {
+                display: none;
+            }
+
+            form .alert ul li {
+                list-style: none;
+            }
+
+            form .alert ul {
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="text-center py-2 text-danger font-weight-bold">
+            <i class="far fa-envelope"></i> minershomeaddmin@gmail.com
+        </div>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark mb-4" style="background-color: rgba(0, 105, 96, 0.9);"> <!--#2B414B-->
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'miners_pages:index' %}">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'miners_pages:about' %}">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'miners_pages:faqs' %}">FAQs</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'miners_pages:tc' %}">T&C</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'miners_pages:transactions' %}">Transactions</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav active">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'miners_pages:index' %}"> Hello {{ user.username }}</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-in-alt"></i> Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'miners_account:register' %}"><i class="fas fa-user-plus"></i> Register</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+            </div>
+
+        {% block content %}
+
+        {% endblock %}
+
+        <br><br>
+        <div class="footer text-center text-light py-2">
+            &copy; <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script> All Rights Reserved, MinersHome.
+        </div>
+
+
+
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+
+        <script type="text/javascript">function add_chatinline(){var hccid=84286461;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+add_chatinline(); </script>
+    </body>
+</html>

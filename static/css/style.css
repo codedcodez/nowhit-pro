@@ -1,0 +1,84 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+
+
+.introduction {
+    background-color: rgba(0, 77, 64, 0.3);
+}
+
+.intro-text {
+    font-size: 30px;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.head-style {
+    background-color: rgba(0, 105, 96, 0.8);
+}
+
+.package-btn {
+    background-color: rgba(0, 105, 96, 0.8);
+}
+
+.package {
+    font-size: 28px;
+}
+
+.footer {
+    background-color: rgba(0, 105, 96, 0.9);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.final {
+    font-size: 30px;
+}
+
+
+.table-head {
+    background-color: rgba(0, 96, 96, 0.7);
+}
+
+
+.last-desc {
+    font-size: 30px;
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.miners-text {
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+
+.miners-home {
+    font-family: 'Lobster Two', cursive;
+}
+
+
+.cust {
+    background-color: rgba(0, 0, 10, 0.9);
+}
+
+
+.reg-back {
+    background-color: rgba(0, 12, 8, 0.9);
+}
+
+#gen {
+    font-size: 30px;
+}
+
+.general {
+    background-color: rgba(0, 77, 64, 0.3);
+}

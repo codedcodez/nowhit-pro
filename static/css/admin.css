@@ -1,0 +1,46 @@
+#header {
+    height: 50px;
+    background-color: rgba(26, 35, 126,1.0);
+    color: #fff;
+}
+
+#branding h1{
+    color: #fff;
+}
+
+a:link,
+a:visited {
+    color: #004D40;
+}
+
+div.breadcrumbs {
+    background-color: gba(26, 35, 126,0.7);
+    color: #004D40;
+}
+
+
+div.breadcrumbs a {
+    color: #292F33;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background-color: rgba(26, 35, 126,0.7);
+}
+
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background-color: rgba(26, 35, 126,0.7);
+    color: #fff;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default {
+    background-color: rgba(26, 35, 126,1.0);
+    color: #fff;
+}
+
+
+
+.selector-chosen h2 {
+    background-color: #004D40;
+    color: #fff;
+}
