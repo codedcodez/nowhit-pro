@@ -9,6 +9,7 @@ class BronzePackageForm(forms.ModelForm):
         fields = ('btc_address', 'amount')
 
         widgets = {
+            'btc_address': forms.TextInput(attrs={'placeholder': 'Enter your btc wallet to receive payment'}),
             'amount': forms.NumberInput(attrs={'placeholder': 'Enter from 1 to 3'}),
         }
 

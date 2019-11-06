@@ -7,7 +7,7 @@ from miners_account.models import UserProfile
 
 
 class BronzePackage(models.Model):
-    btc_address = models.CharField(max_length=30, verbose_name='BTC Address')
+    btc_address = models.CharField(max_length=200, verbose_name='BTC Address')
     amount = models.PositiveIntegerField(validators=[MinValueValidator(0),
                                        MaxValueValidator(3)], verbose_name='BTC Amount to Mine')
     investor_check = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -19,7 +19,7 @@ class BronzePackage(models.Model):
 
 
 class SilverPackage(models.Model):
-    btc_address = models.CharField(max_length=30, verbose_name='BTC Address')
+    btc_address = models.CharField(max_length=200, verbose_name='BTC Address')
     amount = models.PositiveIntegerField(validators=[MinValueValidator(4),
                                        MaxValueValidator(7)], verbose_name='BTC Amount to Mine')
     investor_check = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -31,7 +31,7 @@ class SilverPackage(models.Model):
 
 
 class GoldPackage(models.Model):
-    btc_address = models.CharField(max_length=30, verbose_name='BTC Address')
+    btc_address = models.CharField(max_length=200, verbose_name='BTC Address')
     amount = models.PositiveIntegerField(validators=[MinValueValidator(8),
                                        MaxValueValidator(15)], verbose_name='BTC Amount to Mine')
     investor_check = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -43,7 +43,7 @@ class GoldPackage(models.Model):
 
 
 class PlatinumPackage(models.Model):
-    btc_address = models.CharField(max_length=30, verbose_name='BTC Address')
+    btc_address = models.CharField(max_length=200, verbose_name='BTC Address')
     amount = models.PositiveIntegerField(validators=[MinValueValidator(16),
                                        MaxValueValidator(20)], verbose_name='BTC Amount to Mine')
     investor_check = models.ForeignKey(User, on_delete=models.CASCADE, null=True)

@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
+from .models import UserProfile
+
 from .forms import UserForm, UserProfileForm
 
 
@@ -17,7 +19,7 @@ def register(request):
             profile = profile_form.save(commit=False)
             profile.user = user
             profile.save()
-
+            
             messages.success(request, "Your registration was successful")
 
             return redirect('login')
