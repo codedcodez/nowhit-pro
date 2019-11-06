@@ -22,6 +22,7 @@ class SilverPackageForm(forms.ModelForm):
         fields = ('btc_address', 'amount')
 
         widgets = {
+            'btc_address': forms.TextInput(attrs={'placeholder': 'Enter your btc wallet to receive payment'}),
             'amount': forms.NumberInput(attrs={'placeholder': 'Enter from 4 to 7'}),
         }
 
@@ -35,6 +36,7 @@ class GoldPackageForm(forms.ModelForm):
         fields = ('btc_address', 'amount')
 
         widgets = {
+            'btc_address': forms.TextInput(attrs={'placeholder': 'Enter your btc wallet to receive payment'}),
             'amount': forms.NumberInput(attrs={'placeholder': 'Enter from 8 to 15'}),
         }
 
@@ -48,5 +50,6 @@ class PlatinumPackageForm(forms.ModelForm):
         fields = ('btc_address', 'amount')
 
         widgets = {
+            'btc_address': forms.TextInput(attrs={'placeholder': 'Enter your btc wallet to receive payment'}),
             'amount': forms.NumberInput(attrs={'placeholder': 'Enter from 16 to 20'}),
         }
