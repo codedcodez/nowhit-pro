@@ -58,7 +58,7 @@ class PlatinumPackage(models.Model):
 class Transaction(models.Model):
     btc_address = models.CharField(max_length=500, verbose_name='BTC Address')
     btc_address_link = models.URLField(max_length=500, verbose_name='BTC Address Link')
-    amount = models.DecimalField(max_digits=20, decimal_places=8)
+    amount = models.DecimalField(max_digits=20, decimal_places=2)
     date_updated = models.DateField(default=datetime.now, blank=True, verbose_name='Date Updated')
 
     def __str__(self):
